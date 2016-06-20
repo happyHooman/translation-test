@@ -1,13 +1,14 @@
-# Cucumber Testy Tutorial
+# Translation test
 
-Integration Tests with [Testy](https://github.com/sdl/Testy) and [Cucumber](https://cucumber.io/)
+Elementary test of translation sites like [Google](https://translate.google.com/) and [SDL](https://www.freetranslation.com/)
 
-## Running the Tests:
+Well we all know sometimes the results of the translations look very weird and funny, that's why they need some tests. :)
 
-    mvn clean test -DfailIfNoTests=false
+
+Created with [Testy](https://github.com/sdl/Testy) and [Cucumber](https://cucumber.io/)
+
+## Running the Test:
+
+    mvn test
 	
-For Running specific Test add system parameter "test":
-	 
-	 mvn clean test -DfailIfNoTests=false -Dtest=LoginTest
-	 mvn clean test -DfailIfNoTests=false -Dtest=AccountTest
-
+	
