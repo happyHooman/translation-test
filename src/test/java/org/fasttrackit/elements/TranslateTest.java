@@ -14,7 +14,6 @@ public class TranslateTest extends TestBase {
     @Test
     public void GoogleTranslate() {
         TestBase.driver.get("https://translate.google.com/");
-
         String textToTranslate = "Buona sera";
         String expectedResult = "Good evening";
         String result;
@@ -22,13 +21,11 @@ public class TranslateTest extends TestBase {
 
         result = google.translate(textToTranslate);
         LOGGER.info("'{}' => '{}' ", textToTranslate, result);
-        LOGGER.info(" Expected: '{}' => Found: '{}' ", expectedResult, result);
         Assert.assertEquals(result, expectedResult);
     }
 
     @Test
     public void SDLTranslate() {
-
         TestBase.driver.get("https://www.freetranslation.com/");
         String textToTranslate = "Buona sera";
         String expectedResult = "Good evening";
@@ -37,7 +34,6 @@ public class TranslateTest extends TestBase {
 
         result = sdl.translate(textToTranslate);
         LOGGER.info("'{}' => '{}' ", textToTranslate, result);
-        LOGGER.info(" Expected: '{}' => Found: '{}' ", expectedResult, result);
         Assert.assertEquals(result, expectedResult);
     }
 }
