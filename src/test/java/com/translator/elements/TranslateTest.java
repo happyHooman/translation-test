@@ -1,8 +1,8 @@
-package org.fasttrackit.elements;
+package com.translator.elements;
 
-import org.fasttrackit.onlinelibrary.GoogleTranslate;
-import org.fasttrackit.onlinelibrary.SDLTranslate;
-import org.fasttrackit.util.TestBase;
+import com.translator.onlinelibrary.GoogleTranslateView;
+import com.translator.onlinelibrary.SDLTranslateView;
+import com.translator.util.TestBase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -13,26 +13,24 @@ public class TranslateTest extends TestBase {
 
     @Test
     public void GoogleTranslate() {
-        TestBase.driver.get("https://translate.google.com/");
+        driver.get("https://translate.google.com/");
         String textToTranslate = "Buona sera";
         String expectedResult = "Good evening";
-        String result;
-        GoogleTranslate google = new GoogleTranslate();
+        GoogleTranslateView google = new GoogleTranslateView();
 
-        result = google.translate(textToTranslate);
+        String result = google.translate(textToTranslate);
         LOGGER.info("'{}' => '{}' ", textToTranslate, result);
         Assert.assertEquals(result, expectedResult);
     }
 
     @Test
     public void SDLTranslate() {
-        TestBase.driver.get("https://www.freetranslation.com/");
+        driver.get("https://www.freetranslation.com/");
         String textToTranslate = "Buona sera";
         String expectedResult = "Good evening";
-        String result;
-        SDLTranslate sdl = new SDLTranslate();
+        SDLTranslateView sdl = new SDLTranslateView();
 
-        result = sdl.translate(textToTranslate);
+        String result = sdl.translate(textToTranslate);
         LOGGER.info("'{}' => '{}' ", textToTranslate, result);
         Assert.assertEquals(result, expectedResult);
     }

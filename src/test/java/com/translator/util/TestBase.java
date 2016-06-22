@@ -1,4 +1,4 @@
-package org.fasttrackit.util;
+package com.translator.util;
 
 import com.sdl.selenium.web.utils.PropertiesReader;
 import com.sdl.selenium.web.utils.Utils;

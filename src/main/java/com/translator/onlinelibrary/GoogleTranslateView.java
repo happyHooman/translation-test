@@ -1,12 +1,12 @@
-package org.fasttrackit.onlinelibrary;
+package com.translator.onlinelibrary;
 
 import com.sdl.selenium.web.WebLocator;
 import com.sdl.selenium.web.utils.Utils;
 
-//import static src.test.java.org.fasttrackit.util.TestBase.driver;
+//import static org.fasttrackit.util.TestBase.driver;
 
 
-public class GoogleTranslate {
+public class GoogleTranslateView {
 
     private WebLocator openInputLanguageList = new WebLocator().setId("gt-sl-gms");
     private WebLocator selectInputLanguage = new WebLocator().setText("Italiană").setClasses("goog-menuitem-content");
