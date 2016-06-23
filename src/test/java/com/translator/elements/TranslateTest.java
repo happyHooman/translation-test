@@ -6,10 +6,11 @@ import com.translator.util.TestBase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class TranslateTest extends TestBase {
-    private static final Logger LOGGER = LoggerFactory.getLogger(TranslateTest.class);
+//    private static final Logger LOGGER = LoggerFactory.getLogger(TranslateTest.class);
 
     @Test
     public void GoogleTranslate() {
@@ -18,8 +19,7 @@ public class TranslateTest extends TestBase {
         String expectedResult = "Good evening";
         GoogleTranslateView google = new GoogleTranslateView();
 
-        String result = google.translate(textToTranslate);
-        LOGGER.info("'{}' => '{}' ", textToTranslate, result);
+        String result = google.translate("Italiană", "Engleză", textToTranslate);
         Assert.assertEquals(result, expectedResult);
     }
 
@@ -30,8 +30,7 @@ public class TranslateTest extends TestBase {
         String expectedResult = "Good evening";
         SDLTranslateView sdl = new SDLTranslateView();
 
-        String result = sdl.translate(textToTranslate);
-        LOGGER.info("'{}' => '{}' ", textToTranslate, result);
+        String result = sdl.translate("Italian", "English", textToTranslate);
         Assert.assertEquals(result, expectedResult);
     }
 }
